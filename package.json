@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/alexsharich/nJS/issues"
   },
-  "homepage": "https://github.com/alexsharich/nJS#readme"
+  "homepage": "https://github.com/alexsharich/nJS#readme",
+  "dependencies": {
+    "currency-converter-lt": "^1.3.1"
+  }
 }
