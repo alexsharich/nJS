@@ -1,0 +1,4 @@
+some text from fs_text
+add new text
+add new text
+add new text
