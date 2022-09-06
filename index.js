@@ -56,7 +56,7 @@ server.listen(PORT, HOST, () => {
 }) */
 
 //new server2
-const http = require('http')
+/* const http = require('http')
 const fs = require('fs')
 
 
@@ -79,4 +79,23 @@ const HOST = 'localhost'
 
 server.listen(PORT, HOST, () => {
     console.log(`started on  hhtp://${HOST}:${PORT}`)
+}) */
+
+const express = require('express')
+
+const app = express()
+
+app.get('/', (req, res) => {
+    res.send('This is home page')
+})
+app.get('/about', (req, res) => {
+    res.send('This is about page')
+})
+app.get('/user/:name/:id', (req, res) => {
+    res.send(`User ID: ${req.params.id}, User name: ${req.params.name}`)
+})
+const PORT = 3000
+
+app.listen(PORT, () => {
+    console.log(`Server started : http://localhost:${PORT}`)
 })
