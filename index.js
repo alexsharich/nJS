@@ -85,14 +85,17 @@ const express = require('express')
 
 const app = express()
 
+app.set('view engine', 'ejs')
+
 app.get('/', (req, res) => {
-    res.send('This is home page')
+    res.render('index.')
 })
 app.get('/about', (req, res) => {
-    res.send('This is about page')
+    res.render('about')
 })
-app.get('/user/:name/:id', (req, res) => {
-    res.send(`User ID: ${req.params.id}, User name: ${req.params.name}`)
+app.get('/user/:name', (req, res) => {
+    let data = { name: req.params.name, hobbies: ['football', 'skate', 'basketball'] }
+    res.render('user', data)
 })
 const PORT = 3000
 
